@@ -10,15 +10,27 @@
     <link rel="stylesheet" href="./css/coffee.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/admin.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+     <script>
+   $(document).ready(function(){
+	   $('.login').hover(function() {
+		   $(this).css("color", "red");
+		 }, function(){
+		   $(this).css("color", "white");
+		 });
+   });
+  
+   </script>
 </head>
 <body>
 <%
 
-session.setAttribute("id", "admin");
-/* String adminID = null; */
-	if(session.getAttribute("id") != "admin"){
-		
-		/* adminID = (String)session.getAttribute("admin"); */
+String adminID = null;
+if(session.getAttribute("adminID") != null){
+	
+	adminID = (String)session.getAttribute("adminID");
+}
+
 	
 %>
     <div class="wrap">
@@ -26,38 +38,38 @@ session.setAttribute("id", "admin");
             <nav class="tnb">
                 <ul class="top_menu">
                     <li>
-                           <%--      <%
+                                <%
            				 if(adminID == null){
-           					 %> --%>
+           					 %>
            				 <a href="login.jsp" class="login">로그인</a>
            	 <%
            				 }else {
+           					 
+           				 
          	   %>
-         	   <a href="memberList.jsp" class="login">회원관리</a>
-         	   <a href="boardList.jsp" class="login">게시판관리</a>
-         	   <a href="salesList.jsp" class="login">판매관리</a>
-         	   <a href="purchaseList.jsp" class="login">구매관리</a>
-         	   <a href="sendSns.jsp" class="login">고객문자발송</a>
-         	  	<a href="admin_edit.jsp">관리자 정보 수정</a>
-         	  	
-         	   <a href="logoutAction.jsp" class="login">로그아웃</a>
+         	       <div class="wrap">
+        <header class="hd">
+            <nav class="tnb">
+                <ul class="top_menu">
+                    <li>
+         	 <p style="float:right; position:relative; top:7px; right:60px; ">관리자<%=adminID %>님 환영합니다</p>
                   <% }%>
                        
-                        <a href=""><img src="/img/ico.png" alt=""></a>
+                        
                     </li>
                 </ul>
             </nav>
             <nav class="gnb">
                 <ul class="bot_menu">
                     <li>
-                        <a href="main.html"><img src="/img/logo.png" alt=""></a>
+                        <a href="index.jsp"><img src="./img/logo.png" alt=""></a>
                         <a href="" class="mbtn1">BUY ONLINE</a>
                         <a href="">MEMBER'S CLUB</a>
                         <a href="">MENU</a>
                         <a href="">STORE</a>
                         <a href="">THE COFFEE BEAN</a>
                         <a href="">CBTL</a>
-                        <a href=""><img src="img/search.png" alt=""></a>
+                        <a href=""><img src="./img/search.png" alt=""></a>
                     </li>
                 </ul>
                 <div class="submenu">

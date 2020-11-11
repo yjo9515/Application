@@ -48,26 +48,7 @@ public class UserDAO {
 		}
 		return -2;	
 	}
-	public int adminlogin(String adminID, String adminPassword) {
-		String SQL = "SELECT userPassword FROM mem WHERE userID = yjo9515";
-		try {
-			pstm = conn.prepareStatement(SQL);
-			pstm.setString(1, adminID);		
-			rs = pstm.executeQuery();
-			if(rs.next()) {
-			if(rs.getString(1).equals(adminPassword)) {
-				return 1;//성공
-			}else {
-				return 0; //실패(불일치)
-			}
-			}
-			
-		return -1;
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		return -2;	
-	}
+	
 	public int join(UserBeans user) {
 		String SQL ="INSERT INTO mem VALUES (?,?,?,?)";
 		try {

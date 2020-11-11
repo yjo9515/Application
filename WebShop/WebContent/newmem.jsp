@@ -45,21 +45,21 @@ String userID = null;
                         <a href="">채용정보</a>
                         <a href="">단체 및 기업구매</a>
                         <a href="">고객서비스</a>
-                        <a href=""><img src="/img/ico.png" alt=""></a>
+                        <a href=""><img src="./img/ico.png" alt=""></a>
                     </li>
                 </ul>
             </nav>
             <nav class="gnb">
                 <ul class="bot_menu">
                     <li>
-                        <a href="main.html"><img src="/img/logo.png" alt=""></a>
+                        <a href="index.jsp"><img src="./img/logo.png" alt=""></a>
                         <a href="">BUY ONLINE</a>
                         <a href="">MEMBER'S CLUB</a>
                         <a href="">MENU</a>
                         <a href="">STORE</a>
                         <a href="">THE COFFEE BEAN</a>
                         <a href="">CBTL</a>
-                        <a href=""><img src="img/search.png" alt=""></a>
+                        <a href=""><img src="./img/search.png" alt=""></a>
                     </li>
                 </ul>
                 <div class="submenu">
@@ -154,9 +154,9 @@ String userID = null;
              <span id="point_txt" style="font-weight: 550;">JOIN MEMBER</span>
              <ul>
                  <li><img src="/img/join_step01.jpg" alt=""><span>회원약관 동의</span></li>
-                 <li class="bar"><img src="/img/join_bar_01.gif"   alt=""></li>
+                 <li class="bar"><img src="./img/join_bar_01.gif"   alt=""></li>
                  <li><img src="/img/join_step02_on.jpg" alt=""><span>회원정보입력</span></li>
-                 <li class="bar" ><img src="/img/join_bar_01.gif"alt=""></li>
+                 <li class="bar" ><img src="./img/join_bar_01.gif"alt=""></li>
                  <li><img src="/img/join_step03.jpg" alt=""><span>가입완료</span></li>
              </ul>
              <div class="joinform">

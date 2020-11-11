@@ -3,6 +3,8 @@
     <%@ page import="user.UserDAO" %>
     <%@ page import="user.UserBeans" %>
     <%@ page import="java.io.PrintWriter" %>
+    <%@ page import="admin.AdminDAO" %>
+    <%@ page import="admin.AdminBeans" %>
     <% request.setCharacterEncoding("UTF-8"); %>
      <jsp:useBean id="user" class="user.UserBeans" scope="page"/>
      <jsp:setProperty name="user" property="userID"/>
@@ -16,7 +18,9 @@
 <body>
 	<%
 	UserDAO userDAO = new UserDAO();
+	AdminDAO adminDAO = new AdminDAO();
 	int result = userDAO.login(user.getUserID(),user.getUserPassword());
+	int result2 = adminDAO.adminlogin(user.getAdminID(), user.getAdminPassword());
 	if(result == 1){
 		session.setAttribute("userID",user.getUserID());
 		PrintWriter script = response.getWriter();
@@ -41,7 +45,14 @@
 		script.println("alert('데이터 베이스 오류 발생!')");
 		script.println("history.back()");
 		script.println("</script>");
+	}else if(result2 == 2){
+		session.setAttribute("adminID",user.getAdminID());
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("location.href = 'admin2.jsp'");
+		script.println("</script>");
 	}
+	
 	
 	%>
 </body>

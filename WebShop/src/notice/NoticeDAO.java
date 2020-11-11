@@ -21,7 +21,7 @@ public class NoticeDAO {
 			 String pwd = "1234";
 			 Class.forName("oracle.jdbc.driver.OracleDriver");
 			 conn = DriverManager.getConnection(url,user,pwd);
-			
+			 
 		}catch(Exception e) {
 			System.out.println("접속오류");
 			e.printStackTrace();
